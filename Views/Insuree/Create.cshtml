@@ -1,0 +1,73 @@
+@model Insurance_Quote.Models.Insuree
+
+@{
+    ViewBag.Title = "Create Quote";
+}
+
+<h2>Create Quote</h2>
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>Insuree</h4>
+        <hr />
+
+        @Html.HiddenFor(model => model.Quote)
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.FirstName)
+            @Html.EditorFor(model => model.FirstName)
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.LastName)
+            @Html.EditorFor(model => model.LastName)
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.EmailAddress)
+            @Html.EditorFor(model => model.EmailAddress)
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.DateOfBirth)
+            @Html.EditorFor(model => model.DateOfBirth)
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.CarYear)
+            @Html.EditorFor(model => model.CarYear)
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.CarMake)
+            @Html.EditorFor(model => model.CarMake)
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.CarModel)
+            @Html.EditorFor(model => model.CarModel)
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.DUI)
+            @Html.EditorFor(model => model.DUI)
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.SpeedingTickets)
+            @Html.EditorFor(model => model.SpeedingTickets)
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.CoverageType)
+            @Html.EditorFor(model => model.CoverageType)
+        </div>
+
+        <div class="form-group">
+            <input type="submit" value="Create" class="btn btn-primary" />
+        </div>
+    </div>
+}
