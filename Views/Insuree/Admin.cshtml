@@ -1,0 +1,29 @@
+@model IEnumerable<Insurance_Quote.Models.Insuree>
+
+@{
+    ViewBag.Title = "Admin View";
+}
+
+<h2>All Quotes</h2>
+
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email Address</th>
+            <th>Quote</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var insuree in Model)
+        {
+            <tr>
+                <td>@insuree.FirstName</td>
+                <td>@insuree.LastName</td>
+                <td>@insuree.EmailAddress</td>
+                <td>$@insuree.Quote</td>
+            </tr>
+        }
+    </tbody>
+</table>
